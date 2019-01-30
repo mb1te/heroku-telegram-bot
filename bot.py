@@ -1,6 +1,8 @@
 import vk_api
 import math
 import random
+import bs4
+import requests
 from settings import *
 from data import *
 from vk_api.longpoll import VkLongPoll, VkEventType
