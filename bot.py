@@ -20,7 +20,7 @@ for event in longpoll.listen():
             request = event.text
             if "расписание звонков" in request:
                 write_msg(event.user_id, schedule)
-            elif "чистка" in requests:
+            elif "чистка" in request:
                 if isClear(dom):
                     write_msg(event.user_id, "Ура, Козлов почистил 2 семестр))))")
                 else:
