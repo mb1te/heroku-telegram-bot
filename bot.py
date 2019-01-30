@@ -16,5 +16,6 @@ for event in longpoll.listen():
         if event.to_me:
             request = event.text
             if "#factorial " in request:
-                write_msg(user_id, str(math.factorial(request.split()[1])))
-
+                write_msg(event.user_id, str(math.factorial(request.split()[1])))
+            else:
+                write_msg(event.user_id, "sorry")
