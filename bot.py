@@ -1,10 +1,9 @@
 import vk_api
 import math
 import random
-import bs4
-import requests
 from settings import *
 from data import *
+from ejudge import *
 from vk_api.longpoll import VkLongPoll, VkEventType
 
 
@@ -21,3 +20,8 @@ for event in longpoll.listen():
             request = event.text
             if "расписание звонков" in request:
                 write_msg(event.user_id, schedule)
+            elif "чистка" in requests:
+                if isClear(dom):
+                    write_msg(event.user_id, "Ура, Козлов почистил 2 семестр))))")
+                else:
+                    write_msg(event.user_id, "Козлов еще не почистил таблицы((((((((((((")
