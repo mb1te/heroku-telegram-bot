@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-token = os.environ['TELEGRAM_TOKEN']
-some_api_token = os.environ['SOME_API_TOKEN']
-
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
