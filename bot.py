@@ -1,7 +1,7 @@
 import vk_api
 import math
 import random
-from setings import *
+from settings import *
 from data import *
 from vk_api.longpoll import VkLongPoll, VkEventType
 
