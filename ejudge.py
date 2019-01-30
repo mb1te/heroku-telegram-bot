@@ -2,7 +2,7 @@ import requests
 import bs4
 
 def isClear(s):
-    if (len(s.select('tr') > 10)):
+    if (len(s.select('tr')) > 10):
         return False
     return True
 
