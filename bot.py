@@ -11,7 +11,6 @@ def write_msg(user_id, message):
     vk.method('messages.send', {'user_id' : user_id, 'message' : message, 'random_id': random.randint(1, 10**12)})
 
 vk = vk_api.VkApi(token=token)
-
 longpoll = VkLongPoll(vk)
 
 for event in longpoll.listen():
@@ -21,7 +20,7 @@ for event in longpoll.listen():
             if "расписание звонков" in request:
                 write_msg(event.user_id, schedule)
             elif "чистка" in request:
-                if isClear(dom):
+                if isClear():
                     write_msg(event.user_id, "Ура, Козлов почистил 2 семестр))))")
                 else:
                     write_msg(event.user_id, "Козлов еще не почистил таблицы((((((((((((")
