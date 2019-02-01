@@ -15,7 +15,6 @@ def get_ans(url):
     table = b.find_all('table')[1]
     n = []
     for row in table.find_all('tr'):
-        col = 0
         cols = row.find_all('td')
         s = []
         for c in cols:
@@ -32,5 +31,5 @@ def get_ans(url):
             ans += k[:min(len(k), 10)]
             for z in range(max(0, 10 - len(k))):
                 ans += " "
-            ans += "\n"
+        ans += "\n"
     return ans
