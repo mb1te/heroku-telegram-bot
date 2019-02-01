@@ -24,3 +24,5 @@ for event in longpoll.listen():
                     write_msg(event.user_id, "Ура, Козлов почистил 2 семестр))))")
                 else:
                     write_msg(event.user_id, "Козлов еще не почистил таблицы((((((((((((")
+            elif "таблица геометрия" in request:
+                write_msg(event.user_id, get_ans('http://ejudge.cfuv.ru/2018/II_semestr/standings/standings377.html'))
