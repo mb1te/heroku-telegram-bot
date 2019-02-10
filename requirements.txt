@@ -2,4 +2,4 @@ vk_api
 bs4
 requests
 lxml
-json
+json 
