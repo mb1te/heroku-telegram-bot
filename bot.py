@@ -27,13 +27,9 @@ keyboard = {
     "one_time": False,
     "buttons": [
 
-    [get_button(label="расписание звонков", color="negative"),
-    get_button(label="расписание", color="positive")],
-    [get_button(label="расписание понедельник", color="primary"),
-    get_button(label="расписание вторник", color="primary")],
-    [get_button(label="расписание среда", color="primary"),
-    get_button(label="расписание четверг", color="primary")],
-    [get_button(label="расписание пятница", color="primary")]
+    [get_button(label="расписание звонков", color="positive"),
+    get_button(label="расписание", color="primary")],
+    [get_button(label="геометрия", color="primary")]
 
     ]
 }
@@ -63,6 +59,8 @@ for event in longpoll.listen():
 					write_img(event.user_id, 'photo-175382124_456239019')
 				else:
 					write_img(event.user_id, 'photo-175382124_456239021')
+			elif "геометрия" in request:
+				vk.method('messages.send', {'user_id' : user_id, 'forward_messages' : 2051357, 'random_id': random.randint(1, 10**12), "keyboard" : keyboard})
 			else:
 				write_msg(event.user_id, ".")
 
