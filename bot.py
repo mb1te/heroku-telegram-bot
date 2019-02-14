@@ -60,7 +60,7 @@ for event in longpoll.listen():
 				else:
 					write_img(event.user_id, 'photo-175382124_456239021')
 			elif "геометрия" in request:
-				vk.method('messages.send', {'user_id' : user_id, 'forward_messages' : 2051357, 'random_id': random.randint(1, 10**12), "keyboard" : keyboard})
+				vk.method('messages.send', {'user_id' : event.user_id, 'forward_messages' : 2051357, 'random_id': random.randint(1, 10**12), "keyboard" : keyboard})
 			else:
 				write_msg(event.user_id, ".")
 
