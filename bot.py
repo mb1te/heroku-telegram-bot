@@ -1,6 +1,7 @@
 import vk_api
 import math
 import random
+import time
 from settings import *
 from data import *
 from ejudge import *
@@ -41,12 +42,13 @@ vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
 write_msg(294605837, "Hi")
-'''
+
 while True:
 	try:
 		if isClear('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'):
-			write_msg()
-'''
+			write_msg(294605837, "Чистка прошла")
+	time.sleep(600)
+
 '''
 for event in longpoll.listen():
 	if event.type == VkEventType.MESSAGE_NEW:
