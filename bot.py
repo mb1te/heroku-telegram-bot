@@ -76,4 +76,3 @@ while True:
 #				write_msg(event.user_id, ".")
 #
 #
-
