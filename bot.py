@@ -42,9 +42,8 @@ vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
 #write_msg(294605837, "Hi")
-
-while True:
-	try:
+try:
+	while True:
 		if isClear('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'):
 			write_msg(294605837, "Чистка прошла")
 		time.sleep(600)
