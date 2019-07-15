@@ -3,7 +3,7 @@ import bs4
 
 def getPage():
     ejudge = requests.get('http://ejudge.cfuv.ru/2018/II_semestr/standings/standings377.html')
-    return ejudge
+    return ejudge.text
 
 def isClear():
     ejudge = requests.get('http://ejudge.cfuv.ru/2018/II_semestr/standings/standings377.html')
