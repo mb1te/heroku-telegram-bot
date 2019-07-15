@@ -29,7 +29,7 @@ keyboard = {
 
     [get_button(label="расписание звонков", color="positive"),
     get_button(label="расписание", color="primary")],
-    [get_button(label="ejudge", color="primary")]
+    [get_button(label="чистка", color="primary")]
 
     ]
 }
@@ -40,6 +40,14 @@ keyboard = str(keyboard.decode('utf-8'))
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
+write_msg(294605837, "Hi")
+'''
+while True:
+	try:
+		if isClear('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'):
+			write_msg()
+'''
+'''
 for event in longpoll.listen():
 	if event.type == VkEventType.MESSAGE_NEW:
 		if event.to_me:
@@ -61,10 +69,10 @@ for event in longpoll.listen():
 					write_img(event.user_id, 'photo-175382124_456239021')
 			elif "чистка" in request:
 				write_msg(event.user_id, isClear('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'))
-			elif "ejudge" in request:
-				write_msg(event.user_id, get_ans('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'))
+			#elif "ejudge" in request:
+			#	write_msg(event.user_id, get_ans('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'))
 			else:
 				write_msg(event.user_id, ".")
 
-
+'''
 
