@@ -49,6 +49,7 @@ while True:
 			write_msg(294605837, "Чистка прошла")
 		time.sleep(600)
 
+
 '''
 for event in longpoll.listen():
 	if event.type == VkEventType.MESSAGE_NEW:
