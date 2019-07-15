@@ -29,7 +29,7 @@ keyboard = {
 
     [get_button(label="расписание звонков", color="positive"),
     get_button(label="расписание", color="primary")],
-    [get_button(label="геометрия", color="primary")]
+    [get_button(label="ejudge", color="primary")]
 
     ]
 }
@@ -59,8 +59,8 @@ for event in longpoll.listen():
 					write_img(event.user_id, 'photo-175382124_456239019')
 				else:
 					write_img(event.user_id, 'photo-175382124_456239021')
-			elif "геометрия" in request:
-				vk.method('messages.send', {'user_id' : event.user_id, 'forward_messages' : 2051357, 'random_id': random.randint(1, 10**12), "keyboard" : keyboard})
+			elif "ejudge" in request:
+				write_msg(event.user_id, getPage())
 			else:
 				write_msg(event.user_id, ".")
 
