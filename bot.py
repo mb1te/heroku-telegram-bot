@@ -47,7 +47,7 @@ while True:
 	try:
 		if isClear('http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html'):
 			write_msg(294605837, "Чистка прошла")
-	time.sleep(600)
+		time.sleep(600)
 
 '''
 for event in longpoll.listen():
