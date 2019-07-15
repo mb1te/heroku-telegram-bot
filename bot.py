@@ -60,7 +60,7 @@ for event in longpoll.listen():
 				else:
 					write_img(event.user_id, 'photo-175382124_456239021')
 			elif "ejudge" in request:
-				write_msg(event.user_id, getPage())
+				write_msg(event.user_id, getPage()[:3000])
 			else:
 				write_msg(event.user_id, ".")
 
