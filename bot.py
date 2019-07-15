@@ -59,8 +59,10 @@ for event in longpoll.listen():
 					write_img(event.user_id, 'photo-175382124_456239019')
 				else:
 					write_img(event.user_id, 'photo-175382124_456239021')
+			elif "чистка" in request:
+				write_msg(event.user_id, isClear(http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html))
 			elif "ejudge" in request:
-				write_msg(event.user_id, getPage()[:3000])
+				write_msg(event.user_id, get_ans(http://ejudge.cfuv.ru/2018/III_semestr/standings/standings048.html))
 			else:
 				write_msg(event.user_id, ".")
 

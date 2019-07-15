@@ -5,8 +5,8 @@ def getPage():
     ejudge = requests.get('http://ejudge.cfuv.ru/2018/II_semestr/standings/standings377.html')
     return ejudge.text
 
-def isClear():
-    ejudge = requests.get('http://ejudge.cfuv.ru/2018/II_semestr/standings/standings377.html')
+def isClear(url):
+    ejudge = requests.get(url)
     dom = bs4.BeautifulSoup(ejudge.text, features="lxml")
     if (len(dom.select('tr')) > 10):
         return False
