@@ -41,7 +41,7 @@ keyboard = str(keyboard.decode('utf-8'))
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
-write_msg(294605837, "Hi")
+#write_msg(294605837, "Hi")
 
 while True:
 	try:
